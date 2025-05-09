@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?government,india') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #51a1f1;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .bg-dark {
+            --bs-bg-opacity: 1;
+            background-color: #0d6efd !important;
+        }
+
+        /* Navbar Hover Effect */
+        .nav-hover {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-hover:hover {
+            color: #f8d210 !important;
+        }
+
+        .nav-hover::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            background: #f8d210;
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-hover:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Glassmorphism Search Bar */
+        .form-control {
+            background: rgba(9, 90, 241, 0.1);
+            border: none;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-uppercase" href="#">
+                <img src="assets/logo1.png" alt="logo" width="35" height="35" class="d-inline-block align-text-top">
+                Gov Portal
+            </a>
+
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links & Search Bar -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link nav-hover" href="signup.html">Sign-up</a></li>
+                    <li class="nav-item"><a class="nav-link nav-hover" href="central.html">Central Govt</a></li>
+                    <li class="nav-item"><a class="nav-link nav-hover" href="state.html">State Govt</a></li>
+                    <li class="nav-item"><a class="nav-link nav-hover" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link nav-hover" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link nav-hover" href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- Search Bar -->
+                <form class="d-flex">
+                    <input class="form-control me-2 rounded-pill" type="search" placeholder="Search schemes..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-light rounded-pill" type="submit">Search</button>
+                </form>
+
+                <!-- Login Button -->
+                <a href="login.html" class="btn btn-primary ms-3 px-4 rounded-pill">Login</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center text-center text-light">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Welcome to the <span class="text-warning">Government Schemes Portal</span>
+            </h1>
+            <p class="lead typing-text">Your one-stop destination for all government schemes and information.</p>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8">
+                    <p class="fs-5">
+                        Get access to Central & State Government Schemes, find trending schemes with personalized recommendations,
+                        and stay updated with the latest benefits and policies that impact you.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Call to Action Buttons -->
+            <div class="mt-4">
+                <a href="signup.html" class="btn btn-warning btn-lg me-3 px-4">Get Started</a>
+                <a href="#services" class="btn btn-outline-light btn-lg px-4">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom CSS for Hero Section -->
+    <style>
+        .hero {
+            background: url('assets/Background.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        /* Dark Overlay */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Typing Effect */
+        .typing-text {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #fff;
+            width: 0;
+            animation: typing 4s steps(50, end) forwards, blink 0.8s infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Central Government Schemes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">State Government Schemes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Trending Schemes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Upcoming Schemes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="bg-light py-5 text-center">
+        <div class="container">
+            <h2>About Us</h2>
+            <p class="lead">We are committed to serving the public and providing essential services to our citizens.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 text-center">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, please reach out to us at
+                <a href="mailto:info@gov.example" class="text-primary">info@gov.example</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Government of India. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

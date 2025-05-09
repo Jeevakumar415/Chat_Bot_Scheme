@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Contact Directory</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Emblem.png" alt="Government Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="frontpage.html">Home</a></li>
+        <li><a href="#ministries">Ministries</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <div class="back-button-container">
+    <a href="frontpage.html">
+      <button class="back-button">← Back</button>
+    </a>
+  </div>
+  
+
+  <main>
+    <section id="home">
+      <h1>Welcome to the Government Contact Directory</h1>
+      <p>Your gateway to connecting with various government ministries and departments.</p>
+    </section>
+
+    <section id="ministries">
+      <h2>Ministries</h2>
+      <div class="ministry-list">
+        <!-- Ministry Entries Here -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="#" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Government of India. All rights reserved.</p>
+  </footer>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+  
+
+  
+</body>
+</html>
