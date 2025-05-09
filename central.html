@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Government Schemes</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: #1a5897;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Back Button Styling */
+        .btn-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #0e529b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-back i {
+            margin-right: 10px;
+        }
+
+        /* Scheme Section Styling */
+        .schemes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .scheme {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .scheme img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .scheme h2 {
+            font-size: 1.4em;
+            margin: 10px 0;
+        }
+
+        .scheme p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .btn-back {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Central Government Schemes</h1>
+        <p>Empowering the Nation with Progressive Policies</p>
+    </header>
+
+    <!-- Back Button -->
+    <button onclick="window.location.href='frontpage.html'" class="btn-back">
+        <i class="fas fa-arrow-left"></i> Back
+    </button>
+
+    <!-- Schemes Section -->
+    <section class="schemes">
+        <div class="scheme">
+            <img src="modi_flag.jpg" alt="PM Modi addressing the nation">
+            <h2>PM Kisan Yojana</h2>
+            <p>Financial aid for farmers, ensuring prosperity and growth in the agricultural sector.</p>
+        </div>
+
+        <div class="scheme">
+            <img src="modi_with_farmers.jpg" alt="PM Modi with farmers">
+            <h2>Pradhan Mantri Fasal Bima Yojana</h2>
+            <p>Crop insurance to protect farmers from natural calamities.</p>
+        </div>
+
+        <div class="scheme">
+            <img src="modi2.jpg" alt="PM Modi greeting">
+            <h2>Ayushman Bharat Yojana</h2>
+            <p>Health insurance coverage for underprivileged citizens.</p>
+        </div>
+
+        <div class="scheme">
+            <img src="modi3.jpg" alt="PM Modi in traditional wear">
+            <h2>Digital India</h2>
+            <p>Promoting digital infrastructure to improve governance and connectivity.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Government of India. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

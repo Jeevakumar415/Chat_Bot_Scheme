@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Login | Scheme Portal</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Custom Styling -->
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      h1, h2, h3, h4, h5, h6, button {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .btn-primary {
+        font-weight: 600;
+      }
+
+      .form-label {
+        font-weight: 600;
+      }
+
+      .boxContainer {
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="py-5">
+      <section class="py-5">
+        <div class="container">
+          <div id="loginBox" class="boxContainer p-4 p-md-5 rounded-4 shadow-sm mx-auto" style="max-width: 500px;">
+            <h1 class="text-center mb-3">Welcome Back</h1>
+            <p class="text-center text-muted mb-4">Log in to continue</p>
+
+            <!-- Back Button -->
+            <div class="mb-4">
+              <a href="frontpage.html" class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center">
+                <i class="fas fa-arrow-left me-2"></i> Back to Home
+              </a>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email Address</label>
+                <input type="email" id="loginEmail" class="form-control" placeholder="example@example.com" required />
+              </div>
+
+              <div class="mb-4">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" id="loginPassword" class="form-control" placeholder="********" required />
+              </div>
+
+              <!-- Login Button -->
+              <div class="d-grid">
+                <button type="submit" id="loginBtn" class="btn btn-primary btn-lg">
+                  Log In
+                </button>
+              </div>
+            </form>
+
+            <!-- Sign Up Redirect -->
+            <div class="text-center mt-4">
+              <p class="mb-0">Don't have an account?
+                <a href="signup.html" class="text-decoration-none">Sign up here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS Files -->
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/sweetalert.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <!-- Inline JS -->
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('loginEmail').value.trim();
+        const password = document.getElementById('loginPassword').value;
+        console.log('Email:', email);
+        console.log('Password:', password);
+        // TODO: Connect to backend authentication logic here
+      });
+    </script>
+  </body>
+</html>

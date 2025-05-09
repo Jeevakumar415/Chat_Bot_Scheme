@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upcoming Government Schemes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/> 
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #22ee22;
+    }
+    header {
+      background-color: #ff8801;
+      color: rgb(243, 243, 239);
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    footer {
+      background-color: #1a5897;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .btn-back {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #0e529b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .btn-back:hover {
+      background-color: #0056b3;
+    }
+    .btn-back i {
+      margin-right: 10px;
+    }
+    .schemes {
+      padding: 20px;
+    }
+    .section-title {
+      font-size: 1.8em;
+      margin: 20px 0 10px;
+      text-align: center;
+      color: #333;
+    }
+    .scheme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .scheme-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .scheme-link:hover .scheme {
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+    .scheme {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .scheme img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .scheme h2 {
+      font-size: 1.4em;
+      margin: 10px 0;
+    }
+    .scheme p {
+      font-size: 1em;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      .btn-back {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Upcoming Government Schemes</h1>
+    <p>Stay informed about future initiatives from Central and State Governments</p>
+  </header>
+
+  <button onclick="window.location.href='scheme_webpage.html'" class="btn-back">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
+
+  <section class="schemes">
+    <h2 class="section-title">Upcoming Central Government Schemes</h2>
+    <div class="scheme-grid">
+      <a href="national-skill-boost-2025.html" class="scheme-link">
+        <div class="scheme">
+          <img src="SkillIndia.jpg" alt="Central Scheme">
+          <h2>National Skill Boost 2025</h2>
+          <p>Launching in July 2025 to upskill 10 million youth across sectors.</p>
+        </div>
+      </a>
+      <a href="pm-green-energy-mission.html" class="scheme-link">
+        <div class="scheme">
+          <img src="greenenergy.png" alt="Central Scheme">
+          <h2>PM Green Energy Mission</h2>
+          <p>Scheduled for rollout in August 2025 to promote solar adoption in rural areas.</p>
+        </div>
+      </a>
+      <a href="digital-literacy-drive.html" class="scheme-link">
+        <div class="scheme">
+          <img src="digital.jpg" alt="Central Scheme">
+          <h2>Digital Literacy Drive</h2>
+          <p>Expected in November 2025 to train 5 million rural citizens in basic digital skills.</p>
+        </div>
+      </a>
+      <a href="startup-india-2.html" class="scheme-link">
+        <div class="scheme">
+          <img src="startupp.jpg" alt="Central Scheme">
+          <h2>Startup India 2.0</h2>
+          <p>Coming January 2026 with enhanced funding support for tech startups.</p>
+        </div>
+      </a>
+    </div>
+
+    <h2 class="section-title">Upcoming State Government Schemes (Tamil Nadu)</h2>
+    <div class="scheme-grid">
+      <a href="tn-women-startup-grant.html" class="scheme-link">
+        <div class="scheme">
+          <img src="start.jpg" alt="State Scheme">
+          <h2>TN Women Start-up Grant</h2>
+          <p>Starting October 2025: Financial assistance for women entrepreneurs.</p>
+        </div>
+      </a>
+      <a href="smart-schools-2.html" class="scheme-link">
+        <div class="scheme">
+          <img src="smart.jpg" alt="State Scheme">
+          <h2>Smart Schools 2.0</h2>
+          <p>Revamp and digitization of 1,000 government schools across Tamil Nadu by Dec 2025.</p>
+        </div>
+      </a>
+      <a href="tn-electric-mobility.html" class="scheme-link">
+        <div class="scheme">
+          <img src="electric.jpg" alt="State Scheme">
+          <h2>TN Electric Mobility Scheme</h2>
+          <p>Subsidies for electric two-wheelers, launching March 2026.</p>
+        </div>
+      </a>
+      <a href="rural-health-mission-plus.html" class="scheme-link">
+        <div class="scheme">
+          <img src="rural.jpg" alt="State Scheme">
+          <h2>Rural Health Mission Plus</h2>
+          <p>New mobile clinics and health insurance coverage for remote villages, expected mid-2026.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Government of India. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

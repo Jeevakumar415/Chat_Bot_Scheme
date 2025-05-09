@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h2 class="dashboard-title">Citizen Dashboard</h2>
+            <button onclick="logout()" class="btn-logout">Logout</button>
+        </header>
+        
+        <nav>
+            <ul>
+                <li onclick="showSection('schemes')" class="nav-item">Government Schemes</li>
+                <li onclick="showSection('applications')" class="nav-item">My Applications</li>
+                <li onclick="showSection('notifications')" class="nav-item">Notifications</li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="schemes" class="section active">
+                <h3>Available Government Schemes</h3>
+                <p>List of schemes based on your profile.</p>
+                
+                <div class="schemes-list">
+                    <div class="scheme-card">
+                        <h4>PMAY (Pradhan Mantri Awas Yojana)</h4>
+                        <p>Provides affordable housing for the urban poor.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>PMGSY (Pradhan Mantri Gram Sadak Yojana)</h4>
+                        <p>Improving rural road infrastructure to enhance connectivity.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>Ujjwala Yojana</h4>
+                        <p>Providing free LPG connections to women from BPL households.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>Atal Pension Yojana</h4>
+                        <p>A pension scheme aimed at workers in the unorganized sector.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>Ayushman Bharat</h4>
+                        <p>National health protection scheme to provide free healthcare services to the poor.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>Digital India</h4>
+                        <p>Empowering citizens through digital infrastructure and services.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)</h4>
+                        <p>Direct income support for farmers in India.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>Swachh Bharat Abhiyan</h4>
+                        <p>A nationwide cleanliness campaign to ensure open defecation-free India.</p>
+                    </div>
+                    <!-- Additional Schemes -->
+                    <div class="scheme-card">
+                        <h4>PMGDISHA (Pradhan Mantri Gramin Digital Saksharta Abhiyan)</h4>
+                        <p>Digital literacy initiative to empower rural citizens with digital skills.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>Stand-Up India Scheme</h4>
+                        <p>Providing financial support to SC, ST, and women entrepreneurs for starting businesses.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>National Social Assistance Programme (NSAP)</h4>
+                        <p>Support for elderly, widow, and disabled people from low-income groups.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>Skill India Mission</h4>
+                        <p>Empowering youth with skills training to enhance employability and productivity.</p>
+                    </div>
+                    <div class="scheme-card">
+                        <h4>Fasal Bima Yojana</h4>
+                        <p>Crop insurance to protect farmers against crop failure due to natural disasters.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="applications" class="section">
+                <h3>My Applications</h3>
+                <p>Track your submitted applications.</p>
+            </section>
+            
+            <section id="notifications" class="section">
+                <h3>Notifications</h3>
+                <p>Updates and important announcements.</p>
+            </section>
+        </main>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelector(`.nav-item[onclick="showSection('${sectionId}')"]`).classList.add('active');
+        }
+
+        function logout() {
+            alert("Logging out...");
+            window.location.href = "login.html";
+        }
+    </script>
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .dashboard-container {
+            width: 85%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        .dashboard-title {
+            color: #0e335a; /* Dark blue color for the title */
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #327ecf;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+        }
+        .btn-logout {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-logout:hover {
+            background-color: #e60000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            background: #0e335a;
+            color: white;
+            border-radius: 0 0 10px 10px;
+            margin: 0;
+        }
+        nav ul li {
+            padding: 15px 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li:hover {
+            background: #0056b3;
+        }
+        nav ul li.active {
+            background: #2b4f75;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        .active {
+            display: block;
+        }
+        .schemes-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .scheme-card {
+            background: #e9f5fb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .scheme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .scheme-card h4 {
+            margin: 0;
+            color: #17579b;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .scheme-card p {
+            color: #555;
+            font-size: 14px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</body>
+</html>
